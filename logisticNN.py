@@ -1,11 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import h5py
+import h5py #Comment this out if you don't have a dataset on h5. Instead, directly import local dataset of images.
 import scipy
-from PIL import Image
+from PIL import Image 
 from scipy import ndimage
 from lr_utils import load_dataset
 
+#This loads the entire dataset from h5.
 train_set_x_orig, train_set_y, test_set_x_orig, test_set_y, classes = load_dataset()
 
 m_train = np.sum(train_set_x_orig.shape[0]) #Number of training examples
